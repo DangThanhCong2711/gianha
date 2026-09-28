@@ -1,0 +1,13 @@
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+
+
+# Đọc dữ liệu
+data = pd.read_csv('house_prices.csv')
+X = data[['DienTich', 'SoPhongNgu']]
+y = data['GiaNha']
+
+# Chạy mô hình hồi quy tuyến tính
+model = LinearRegression()
+model.fit(X, y)
+print("Đã huấn luyện xong mô hình!")
